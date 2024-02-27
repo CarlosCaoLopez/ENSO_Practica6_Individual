@@ -1,0 +1,9 @@
+git init
+git add .
+git commit -m "Creación directorios base y archivos DP_ControlDeCambios_Grupo1.docx y Plantillas.xlsx"
+git log 
+git tag R1 668aed1d72406898dffa6a897989453d86898170
+git log
+
+git branch Mejoras
+git switch Mejoras
