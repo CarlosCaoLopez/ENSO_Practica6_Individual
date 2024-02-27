@@ -14,3 +14,12 @@ git commit -m "Fichero pdf con cambios propuestos y version 2 del DP_ControlDeCa
 git switch master
 git merge Mejoras 
 git branch -d Mejoras
+
+git add .
+git commit -m "Borrado DP_ControlDeCambios_Grupo1.pdf"
+
+git log
+git tag R2 211192a847502ad519f3b0520aebfd96a63be3f5
+
+git add .
+git commit -m "Actualización de DP_ControlDeCambios_Grupo1.docx a su versión 3"
