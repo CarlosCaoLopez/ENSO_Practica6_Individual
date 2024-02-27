@@ -7,3 +7,10 @@ git log
 
 git branch Mejoras
 git switch Mejoras
+
+git add.
+git commit -m "Fichero pdf con cambios propuestos y version 2 del DP_ControlDeCambios_Grupo1.docx"
+
+git switch master
+git merge Mejoras 
+git branch -d Mejoras
