@@ -1,25 +1,42 @@
-git init
-git add .
-git commit -m "Creación directorios base y archivos DP_ControlDeCambios_Grupo1.docx y Plantillas.xlsx"
-git log 
-git tag R1 668aed1d72406898dffa6a897989453d86898170
-git log
+git init # Inicializamos el repositorio local
+git add . # Mandamos al staging area DP_ControlDeCambios_Grupo1.docx y Plantillas.xlsx
+git commit -m "Creación directorios base y archivos DP_ControlDeCambios_Grupo1.docx y Plantillas.xlsx" # Hacemos commit en el repositorio local de los documentos
+git log # Obtenemos el registro de commits para ver el hash y poder etiquetarlo
+git tag R1 668aed1d72406898dffa6a897989453d86898170 # Etiquetamos el commit con la etiqueta R1
+git log # Comprobamos que se ha etiquetado correctamente
 
-git branch Mejoras
-git switch Mejoras
+git branch Mejoras # Creamos la rama Mejoras 
+git switch Mejoras # Nos cambaiamos de Master a Mejoras
 
-git add.
-git commit -m "Fichero pdf con cambios propuestos y version 2 del DP_ControlDeCambios_Grupo1.docx"
+git add. # Añadimos al staging area el pdf con las  propuestas de cambios y la versión modificada de DP_ControlDeCambios_Grupo1.docx
+git commit -m "Fichero pdf con cambios propuestos y version 2 del DP_ControlDeCambios_Grupo1.docx" # Hacemos commit de los cambios anteriores
 
-git switch master
-git merge Mejoras 
-git branch -d Mejoras
+ git switch master # Nos cambiamos a la rama mejoras
+git merge Mejoras #Fusionamos la rama Mejoras (que va un commit por delante) con la rama Master
+git branch -d Mejoras # Borramos la rama mejoras
 
-git add .
-git commit -m "Borrado DP_ControlDeCambios_Grupo1.pdf"
+git add . # Actualizamos el staging area tras borra el pf con los cambios
+git commit -m "Borrado DP_ControlDeCambios_Grupo1.pdf" # Hacemos commit del borrado
 
-git log
-git tag R2 211192a847502ad519f3b0520aebfd96a63be3f5
+git log Obtenemos el registro de commits para ver el hash y poder etiquetarlo
+git tag R2 211192a847502ad519f3b0520aebfd96a63be3f5 # Etiquetamos la versión con R2
 
-git add .
-git commit -m "Actualización de DP_ControlDeCambios_Grupo1.docx a su versión 3"
+git add . # Añadimos al staging area el documento DP_ControlDeCambios_Grupo1.docx en su versión 3
+git commit -m "Actualización de DP_ControlDeCambios_Grupo1.docx a su versión 3" # Hacemos commit del cambio
+
+git reset 211192a847502ad519f3b0520aebfd96a63be3f5 # Volvemos a la versión etiquetado con r2
+git add . # Añadimos de nuevo la version 3 del documento DP_ControlDeCambios_Grupo1.docx y sus plantillas al staging area
+git commit -m "Actualización de DP_ControlDeCambios_Grupo1.docx a su versión 3 y sus correspondientes plantillas en Plantillas.xlsx" # Hacemos commit de los cambios
+git log # Obtenemos el registro de commits para ver el hash y poder etiquetarlo
+git tag R3 5afd92a1d3af9c949c3f726d37e546f188748f94 # Etiquetamos la versión con r3
+
+git push # Hacemos push al repositorio remoto
+
+git pull # Obtenemos las actualizaciones
+git diff historia.txt # Hacemos git diff de historia.txt 
+git add . # Añadimos los cambios al staging area
+git commit -m "Cambios historia.txt" # Hacemos commit de los cambios
+
+git push # Hacemos push al repositorio remoto
+
+
